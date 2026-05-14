@@ -2,530 +2,546 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://files.catbox.moe/0oko4o.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EliteProTech | PAIRING CODE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Red MD - Pairing | 8-Digit Code</title>
     <style>
-        :root {
-            --primary: #8a2be2;
-            --secondary: #9932cc;
-            --accent: #ff69b4;
-            --text: #ffffff;
-            --text-light: #d3d3d3;
-            --background: #121212;
-            --card-bg: #1e1e1e;
-            --input-bg: #2d2d2d;
-            --success: #4caf50;
-            --error: #f44336;
-            --warning: #ff9800;
-            --shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: var(--transition);
         }
-
+        
         body {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--background);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 1.6;
-            padding: 20px;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 20%);
-            animation: gradientPulse 15s ease infinite;
+            font-family: 'Share Tech Mono', 'Space Mono', 'Courier New', monospace;
+            overflow-x: hidden;
+            color: #00ff41;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
         }
-
-        @keyframes gradientPulse {
-            0% { background-position: 10% 20%, 90% 80%; }
-            50% { background-position: 15% 25%, 85% 75%; }
-            100% { background-position: 10% 20%, 90% 80%; }
-        }
-
-        .home-btn {
-            position: fixed;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: var(--shadow);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .home-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
-        }
-
-        .container {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(138, 43, 226, 0.2);
-            animation: fadeIn 0.5s ease-out;
-            z-index: 1;
-            margin-top: 2rem;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(138, 43, 226, 0.1) 0%,
-                rgba(255, 105, 180, 0.05) 50%,
-                transparent 100%
-            );
-            transform: rotate(30deg);
-            z-index: -1;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 10px rgba(138, 43, 226, 0.4); }
-            100% { box-shadow: 0 0 25px rgba(138, 43, 226, 0.6); }
-        }
-
-        h1 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            font-weight: 700;
-            text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
-        }
-
-        p {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text);
-        }
-
-        .input-container {
-            position: relative;
-            margin-bottom: 1.5rem;
-        }
-
-        .input-container i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-light);
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 15px 15px 15px 45px;
-            border: 2px solid rgba(138, 43, 226, 0.3);
-            border-radius: 10px;
-            background-color: var(--input-bg);
-            color: var(--text);
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        input[type="text"]:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
-        }
-
-        .btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            width: 100%;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0) 60%
-            );
-            transform: translateX(-100%) rotate(30deg);
-            transition: all 0.6s ease;
-        }
-
-        .btn:hover::after {
-            transform: translateX(100%) rotate(30deg);
-        }
-
-        #result {
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            border-radius: 10px;
-            display: none;
-            animation: fadeIn 0.3s ease-out;
-            text-align: center;
-            font-weight: 500;
-            background-color: rgba(138, 43, 226, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-
-        #loading-spinner {
-            display: none;
-            margin: 1.5rem 0;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto;
-            border: 4px solid rgba(138, 43, 226, 0.2);
-            border-top: 4px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        #pair-code {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 1rem 0;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
-            animation: textGlow 2s infinite alternate;
-        }
-
-        @keyframes textGlow {
-            0% { text-shadow: 0 0 5px rgba(138, 43, 226, 0.3); }
-            100% { text-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .action-btn {
-            flex: 1;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .copy-btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-        }
-
-        .copy-btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        .back-btn {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .back-btn:hover {
-            background-color: rgba(138, 43, 226, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .error-message {
-            color: var(--error);
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            display: none;
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-5px); }
-            40%, 80% { transform: translateX(5px); }
-        }
-
-        .success-message {
-            color: var(--success);
-            margin-top: 1rem;
-            display: none;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 1.5rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .home-btn {
-                top: 1rem;
-                right: 1rem;
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        .particles {
+        
+        /* Canvas for Particles */
+        #canvas-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            overflow: hidden;
+            z-index: 0;
+            background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
         }
-
-        .particle {
-            position: absolute;
-            background: rgba(138, 43, 226, 0.3);
+        
+        /* Shooting Stars */
+        .shooting-star {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(45deg, #ff0000, #ff3333, #ff6666);
             border-radius: 50%;
-            animation: float linear infinite;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+            animation: shootStar linear infinite;
+            z-index: 1;
+            opacity: 0;
         }
-
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
+        
+        @keyframes shootStar {
+            0% {
+                transform: translateX(0) translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-400px) translateY(400px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 550px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        /* Hacker Style Glass Card */
+        .glass-card {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.1);
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Logo */
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo svg {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-style: italic;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff0000, #ff3333, #ff6666);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            font-size: 0.8rem;
+            font-style: italic;
+            opacity: 0.7;
+            margin-top: 8px;
+            color: #00ff41;
+        }
+        
+        /* Darkness Code Box */
+        .darkness-code {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+        
+        .darkness-code p {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+        
+        .code-display {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 8px;
+            font-family: 'Share Tech Mono', monospace;
+            font-style: italic;
+            background: linear-gradient(135deg, #00ff41, #00cc33);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Share Tech Mono', monospace;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #00ff41;
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #00ff41;
+            font-family: 'Space Mono', monospace;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        input::placeholder {
+            color: rgba(0, 255, 65, 0.3);
+            font-style: italic;
+        }
+        
+        small {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.7rem;
+            opacity: 0.6;
+            font-style: italic;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: #00ff41;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-style: italic;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+        }
+        
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            color: #ffffff;
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Message Styles */
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+            font-family: 'Space Mono', monospace;
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+        
+        .message.success {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            display: block;
+        }
+        
+        .message.error {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            color: #ff6666;
+            display: block;
+        }
+        
+        /* Session Info */
+        .session-info {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 255, 65, 0.05);
+            border-radius: 12px;
+            border: 1px solid #00ff41;
+        }
+        
+        .session-info strong {
+            color: #00ff41;
+            font-size: 0.9rem;
+        }
+        
+        .session-id {
+            font-family: monospace;
+            font-size: 0.7rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            word-break: break-all;
+            color: #00ff41;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        .copy-btn, .back-btn {
+            width: auto;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 0.8rem;
+            display: inline-block;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Share Tech Mono', monospace;
+            font-style: italic;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .copy-btn {
+            background: #008800;
+            color: #00ff41;
+        }
+        
+        .copy-btn:hover {
+            background: #00aa00;
+            transform: translateY(-2px);
+        }
+        
+        .back-btn {
+            background: #333333;
+            color: #00ff41;
+        }
+        
+        .back-btn:hover {
+            background: #444444;
+            transform: translateY(-2px);
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #00ff41;
+            font-size: 0.75rem;
+            font-style: italic;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .social-link:hover {
+            border-color: #ff0000;
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+        
+        .social-link svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* Loading Spinner */
+        .loading {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 50%;
+            border-top-color: #00ff41;
+            animation: spin 0.8s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            .container { margin: 20px auto; padding: 15px; }
+            .glass-card { padding: 25px; }
+            .code-display { font-size: 1.5rem; letter-spacing: 4px; }
+            .header h1 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    
-    <a href="https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g" class="home-btn">
-        <i class="fab fa-whatsapp"></i>Channel
-    </a>
+    <canvas id="canvas-bg"></canvas>
+    <div id="shooting-stars"></div>
     
     <div class="container">
-        <h1>ELITEPROTECH PAIRING CODE WEBSITE</h1>
-        <p>Enter your WhatsApp number without + sign</p>
-        
-        <div class="form-group">
-            <label for="phone-number">Phone Number</label>
-            <div class="input-container">
-                <i class="fas fa-comment"></i>
-                <input type="text" id="phone-number" placeholder="e.g., 234xxxxxxxx" inputmode="numeric" pattern="[0-9]*">
+        <div class="glass-card">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 5 L85 20 L85 50 C85 70 70 85 50 95 C30 85 15 70 15 50 L15 20 Z" fill="url(#redGradient)" opacity="0.9"/>
+                    <text x="50" y="68" text-anchor="middle" fill="white" font-family="monospace" font-size="50" font-weight="bold" font-style="italic">R</text>
+                    <text x="50" y="85" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="monospace" font-size="12" font-weight="bold">MD</text>
+                </svg>
             </div>
-            <div class="error-message" id="error-message">Please enter a valid phone number (10-15 digits)</div>
-        </div>
-        
-        <button id="submit" class="btn">
-            <span id="btn-text">GET CODE</span>
-            <span id="btn-spinner" style="display: none;">
-                <i class="fas fa-spinner fa-spin"></i>
-            </span>
-        </button>
-        <a href="/qr" id="submit" class="btn" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
-    <span id="btn-text">QR CODE</span>
-    <span id="btn-spinner" style="display: none;">
-        <i class="fas fa-spinner fa-spin"></i>
-    </span>
-    </a>
-
-        
-        <div id="loading-spinner" class="spinner"></div>
-        
-        <div id="result">
-            <p>Your pairing code is:</p>
-            <div id="pair-code"></div>
-            <p>Enter this code in your WhatsApp linked devices</p>
             
-            <div class="action-buttons">
-                <button id="copy-btn" class="action-btn copy-btn">
-                    <i class="fas fa-copy"></i> COPY CODE
-                </button>
-                <a href="./" class="action-btn back-btn">
-                    <i class="fas fa-arrow-left"></i> BACK
+            <div class="header">
+                <h1>&gt; RED MD PAIRING</h1>
+                <p>_ Generate your 8-digit universal code</p>
+            </div>
+            
+            <div class="darkness-code">
+                <p>✦ DARKNESS CODE ✦</p>
+                <div class="code-display" id="codeDisplay">- - - - - - - -</div>
+            </div>
+            
+            <form id="pairForm">
+                <div class="form-group">
+                    <label>>_ WHATSAPP NUMBER</label>
+                    <input type="tel" id="phoneNumber" placeholder="e.g., 278123456789" required>
+                    <small>include country code (any country supported)</small>
+                </div>
+                <button type="submit" id="pairBtn">GENERATE CODE</button>
+            </form>
+            
+            <div id="message" class="message"></div>
+            <div id="sessionInfo" style="display: none;">
+                <div class="session-info">
+                    <strong>✓ CONNECTION ESTABLISHED</strong>
+                    <p style="margin-top: 10px; font-size: 0.8rem;">Save this Session ID for future access:</p>
+                    <div class="session-id" id="sessionId"></div>
+                    <button class="copy-btn" id="copySessionBtn">📋 COPY SESSION</button>
+                    <button class="back-btn" onclick="location.href='/'">⌂ BACK TO HOME</button>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://t.me/Gwetha" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.03-2.01 1.28-5.68 3.76-.54.37-1.02.55-1.46.54-.48-.01-1.4-.27-2.09-.49-.85-.27-1.52-.42-1.46-.89.03-.25.38-.51 1.04-.77 4.09-1.78 6.82-2.96 8.19-3.53 3.9-1.62 4.71-1.9 5.24-1.91.12 0 .38.03.55.22.14.16.18.38.12.59z" fill="#00ff41"/>
+                    </svg>
+                    @Gwetha
                 </a>
-            </div>
-            
-            <div class="success-message" id="success-message">
-                <i class="fas fa-check-circle"></i> Code copied to clipboard!
+                <a href="https://wa.me/27634988678" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm3.86 14.08c-.21.59-1.24 1.08-1.81 1.12-.48.03-.96.01-1.44-.06-.48-.07-1.13-.29-2.18-.86-1.47-.8-2.76-2.08-3.65-3.56-.89-1.48-1.34-3.01-1.38-4.06-.03-.78.27-1.47.74-2.03.47-.56 1.09-.86 1.79-.86.17 0 .34.03.5.08.28.08.53.28.69.53.42.67.98 1.68 1.26 2.3.14.3.21.62.21.95 0 .37-.17.72-.44.97-.16.15-.33.31-.48.48-.19.21-.4.43-.57.66-.2.26-.24.6-.11.88.41.86 1.18 1.84 2.07 2.51.32.24.69.44 1.08.58.27.1.56.14.85.12.29-.02.57-.1.83-.23.28-.14.52-.33.72-.57.21-.26.36-.57.43-.9.07-.34.05-.69-.06-1.02-.11-.33-.3-.62-.55-.85-.26-.23-.55-.4-.86-.51-.16-.06-.33-.09-.5-.09-.27 0-.54.08-.78.23-.24.15-.45.36-.63.6-.16.2-.37.38-.62.49-.25.11-.53.14-.8.08-.27-.06-.52-.21-.73-.41-.5-.47-.93-1.02-1.27-1.62-.16-.28-.24-.6-.24-.92 0-.34.09-.67.26-.96.17-.29.41-.53.7-.71.29-.18.62-.28.96-.28.16 0 .32.03.47.09.3.12.57.33.78.6.34.45.62.95.84 1.48.1.24.15.5.15.76 0 .36-.12.71-.34 1-.22.29-.52.5-.86.63-.26.1-.55.12-.82.05-.28-.07-.53-.24-.74-.46-.39-.4-.72-.86-.97-1.36-.12-.24-.18-.51-.18-.78 0-.33.09-.65.26-.94.17-.29.42-.52.71-.69.29-.17.62-.26.96-.26.21 0 .42.04.62.12.4.16.74.46.98.84.36.56.58 1.21.64 1.89.04.38-.01.76-.14 1.12-.12.35-.32.66-.57.92-.26.26-.57.45-.91.57-.34.12-.7.17-1.05.14-.33-.03-.65-.14-.93-.31-.41-.26-.74-.63-.97-1.07-.2-.38-.3-.8-.29-1.22.01-.41.12-.81.31-1.17.19-.36.46-.67.79-.9.33-.23.71-.37 1.1-.41.39-.04.78.03 1.14.2.36.17.66.44.87.78.21.34.32.73.31 1.12-.01.42-.13.83-.34 1.19-.21.36-.52.65-.89.85-.37.2-.79.3-1.21.29-.37 0-.74-.09-1.06-.27-.48-.27-.86-.68-1.12-1.17-.26-.49-.38-1.05-.34-1.61.04-.56.24-1.09.56-1.55.32-.46.74-.82 1.22-1.06.48-.24 1.01-.36 1.54-.35.53.01 1.04.16 1.5.43.46.27.84.66 1.1 1.13.26.47.39 1.01.38 1.55-.01.54-.16 1.07-.43 1.54-.27.47-.66.85-1.13 1.11-.47.26-1 .4-1.54.4-.31 0-.62-.05-.92-.15-.3-.1-.58-.25-.83-.45z" fill="#00ff41"/>
+                    </svg>
+                    +27 63 498 8678
+                </a>
             </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+    
     <script>
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = window.innerWidth < 768 ? 15 : 30;
+        // ========== SLOW PARTICLE SYSTEM & SHOOTING STARS ==========
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let particles = [];
+        let stars = [];
+        let redLines = [];
+        let shootingStars = [];
+        
+        canvas.width = width;
+        canvas.height = height;
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.z = Math.random() * 100;
+                this.size = Math.random() * 2 + 0.3;
+                this.speedX = (Math.random() - 0.5) * 0.12;
+                this.speedY = (Math.random() - 0.5) * 0.12;
+                this.color = `rgba(255, ${Math.random() * 50 + 50}, ${Math.random() * 50}, ${Math.random() * 0.5 + 0.3})`;
+            }
             
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                const size = Math.random() * 10 + 5;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                
-                const duration = Math.random() * 10 + 10;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                
-                particle.style.opacity = Math.random() * 0.5 + 0.1;
-                
-                particlesContainer.appendChild(particle);
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.z -= 0.2;
+                if (this.z < 0) this.z = 100;
+                if (this.x > width) this.x = 0;
+                if (this.x < 0) this.x = width;
+                if (this.y > height) this.y = 0;
+                if (this.y < 0) this.y = height;
+            }
+            
+            draw() {
+                const scale = 0.8 + (this.z / 100) * 0.5;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * scale, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.shadowBlur = 4;
+                ctx.shadowColor = 'rgba(255, 0, 0, 0.2)';
             }
         }
         
-        createParticles();
-
-        const submitButton = document.getElementById('submit');
-        const phoneNumberInput = document.getElementById('phone-number');
-        const resultDiv = document.getElementById('result');
-        const pairCodeDiv = document.getElementById('pair-code');
-        const copyButton = document.getElementById('copy-btn');
-        const errorMessage = document.getElementById('error-message');
-        const successMessage = document.getElementById('success-message');
-        const btnText = document.getElementById('btn-text');
-        const btnSpinner = document.getElementById('btn-spinner');
-        const loadingSpinner = document.getElementById('loading-spinner');
-
-        function validatePhoneNumber(number) {
-            const cleaned = number.replace(/\D/g, '');
-            return cleaned.length >= 10 && cleaned.length <= 15;
+        class Star {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.radius = Math.random() * 1.2;
+                this.twinkle = Math.random() * Math.PI * 2;
+                this.speed = 0.02 + Math.random() * 0.03;
+            }
+            
+            draw() {
+                const brightness = 0.3 + Math.sin(this.twinkle) * 0.3;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${brightness})`;
+                ctx.fill();
+                this.twinkle += this.speed;
+            }
         }
-
-        submitButton.addEventListener('click', async (e) => {
-            e.preventDefault();
-            const phoneNumber = phoneNumberInput.value.trim();
-            
-            if (!validatePhoneNumber(phoneNumber)) {
-                errorMessage.style.display = 'block';
-                errorMessage.style.animation = 'shake 0.5s';
-                setTimeout(() => {
-                    errorMessage.style.animation = '';
-                }, 500);
-                return;
+        
+        class RedLine {
+            constructor(x1, y1, x2, y2) {
+                this.x1 = x1;
+                this.y1 = y1;
+                this.x2 = x2;
+                this.y2 = y2;
+                this.life = 1;
             }
             
-            errorMessage.style.display = 'none';
-            
-            btnText.style.display = 'none';
-            btnSpinner.style.display = 'inline-block';
-            submitButton.disabled = true;
-            
-            try {
-                const { data } = await axios.get(`/code?number=${phoneNumber}`);
-                const code = data.code || "ERROR";
-                
-                pairCodeDiv.textContent = code;
-                resultDiv.style.display = 'block';
-                
-                resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                
-            } catch (error) {
-                pairCodeDiv.textContent = "SERVICE ERROR";
-                resultDiv.style.display = 'block';
-                console.error("Error:", error);
-            } finally {
-                btnText.style.display = 'inline-block';
-                btnSpinner.style.display = 'none';
-                submitButton.disabled = false;
+            draw() {
+                if (this.life <= 0) return;
+                ctx.beginPath();
+                ctx.moveTo(this.x1, this.y1);
+                ctx.lineTo(this.x2, this.y2);
+                ctx.strokeStyle = `rgba(255, 0, 0, ${this.life * 0.12})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+                this.life -= 0.008;
             }
-        });
-
-        copyButton.addEventListener('click', () => {
-            const code = pairCodeDiv.textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                successMessage.style.display = 'block';
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 2000);
-            });
-        });
-
-        phoneNumberInput.addEventListener('input', (e) => {
-            e.target.value = e.target.value.replace(/\D/g, '');
-            
-            if (errorMessage.style.display === 'block') {
-                errorMessage.style.display = 'none';
+        }
+        
+        class ShootingStar {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height * 0.5;
+                this.length = Math.random() * 80 + 40;
+                this.speedX = - (Math.random() * 5 + 3);
+                this.speedY = Math.random() * 4 + 2;
+                this.opacity = 0.8;
+                this.active = true;
             }
-        });
-    </script>
-</body>
-</html>
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.o
