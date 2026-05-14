@@ -544,4 +544,155 @@
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-                this.o
+                this.opacity -= 0.01;
+                if (this.x < -100 || this.y > height + 100 || this.opacity <= 0) {
+                    this.active = false;
+                }
+            }
+            
+            draw() {
+                if (!this.active) return;
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x - this.length, this.y - this.length * 0.5);
+                ctx.strokeStyle = `rgba(255, 50, 50, ${this.opacity * 0.7})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 80, 80, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+        
+        for (let i = 0; i < 70; i++) particles.push(new Particle());
+        for (let i = 0; i < 120; i++) stars.push(new Star());
+        
+        function createRedLines() {
+            const newLines = [];
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 70 && distance > 20) {
+                        newLines.push(new RedLine(particles[i].x, particles[i].y, particles[j].x, particles[j].y));
+                    }
+                }
+            }
+            return newLines;
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            stars.forEach(star => star.draw());
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            
+            redLines = redLines.filter(line => line.life > 0);
+            redLines.forEach(line => line.draw());
+            
+            if (Math.random() < 0.05) {
+                const newLines = createRedLines();
+                redLines.push(...newLines);
+            }
+            
+            if (Math.random() < 0.02 && shootingStars.length < 5) {
+                shootingStars.push(new ShootingStar());
+            }
+            
+            shootingStars = shootingStars.filter(star => star.active);
+            shootingStars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        });
+        
+        animate();
+        
+        // ========== PAIRING CODE FUNCTIONALITY ==========
+        const pairForm = document.getElementById('pairForm');
+        const phoneNumberInput = document.getElementById('phoneNumber');
+        const pairBtn = document.getElementById('pairBtn');
+        const codeDisplay = document.getElementById('codeDisplay');
+        const messageDiv = document.getElementById('message');
+        const sessionInfoDiv = document.getElementById('sessionInfo');
+        const sessionIdSpan = document.getElementById('sessionId');
+        const copySessionBtn = document.getElementById('copySessionBtn');
+        
+        function generateRandomCode() {
+            return Math.floor(10000000 + Math.random() * 90000000).toString();
+        }
+        
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 4000);
+        }
+        
+        pairForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let phoneNumber = phoneNumberInput.value.trim();
+            
+            if (!phoneNumber) {
+                showMessage('❌ Please enter your WhatsApp number', 'error');
+                return;
+            }
+            
+            const phoneRegex = /^[0-9]{10,15}$/;
+            if (!phoneRegex.test(phoneNumber.replace(/[^0-9]/g, ''))) {
+                showMessage('❌ Invalid phone number (10-15 digits only)', 'error');
+                return;
+            }
+            
+            pairBtn.disabled = true;
+            pairBtn.innerHTML = 'GENERATING CODE<span class="loading"></span>';
+            
+            setTimeout(() => {
+                const pairCode = generateRandomCode();
+                codeDisplay.textContent = pairCode;
+                codeDisplay.style.animation = 'fadeInUp 0.5s ease';
+                
+                const sessionId = 'RMD_' + Math.random().toString(36).substring(2, 15).toUpperCase();
+                sessionIdSpan.textContent = sessionId;
+                sessionInfoDiv.style.display = 'block';
+                
+                showMessage('✓ Code generated successfully!', 'success');
+                
+                pairBtn.disabled = false;
+                pairBtn.innerHTML = 'GENERATE CODE';
+            }, 1500);
+        });
+        
+        copySessionBtn.addEventListener('click', () => {
+            const sessionText = sessionIdSpan.textContent;
+            navigator.clipboard.writeText(sessionText).then(() => {
+                showMessage('✓ Session ID copied to clipboard!', 'success');
+            }).catch(() => {
+                alert('Session ID: ' + sessionText);
+            });
+        });
+        
+        // Clear message on input
+        phoneNumberInput.addEventListener('input', () => {
+            if (messageDiv.style.display !== 'none') {
+                messageDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
